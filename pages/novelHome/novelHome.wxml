@@ -1,0 +1,152 @@
+<view wx:if="{{page_show}}" style='margin-top: 20rpx' id='root' class="{{sex == 2 ? 'page-style-male' : 'page-style-female'}}">
+  <view class="center">
+    <view class='jxbooks'>
+      <view class='jximg'>
+        <image class='article_info-img' src='{{urlimgList}}{{article_info.path}}'></image>
+        <image class='book-free-bg' wx:if="{{article_info.free_etime > current_time}}" src="../../imgs/ico/xianmian.png"></image>
+      </view>
+      <view class='jxnr'>
+        <view class='bt'>{{article_info.title}}</view>
+        <view class='zt'>
+          <text>{{article_info.tstype}}</text>
+          <text class='xscolor' wx:if="{{article_info.status == '0'}}">连载中</text>
+          <text class='xscolor' wx:else>已完结</text>
+        </view>
+        <view style='margin-top: 20rpx' wx:if="{{zbsb}}">
+          <text class='bk'>整本购买</text>
+        </view>
+        <view class='nr'>{{article_info.zishu}} 万字</view>
+
+
+      </view>
+    </view>
+    <view class='read'>
+      <navigator url='/pages/novelReading/novelReading?id={{front_list[0].id}}'>
+        <text class='a'>  开始阅读</text>
+      </navigator>
+
+      <text bindtap="addBook">{{addBookcase}}</text>
+    </view>
+    <view class='nrbox'>
+      {{article_info.desc}}
+    </view>
+  </view>
+  <view class='line'></view>
+  <view class='center'>
+    <view class='sjml'>
+      <text class='h3'>书籍目录</text>
+
+      <navigator url='/pages/novelReading/novelReading?id={{new_info.id}}'>
+        <view class='new'>
+          <view class='new-title'>{{new_info.title}}</view>
+          <view class='new_info-time'>{{update_time}}</view>
+        </view>
+      </navigator>
+
+      <navigator class='sjml-border' wx:for="{{front_list}}" wx:for-index="index" wx:key="item" url='/pages/novelReading/novelReading?id={{item.id}}'>{{item.title}}</navigator>
+    </view>
+  </view>
+  <navigator class='catalog' url='/pages/catalog/catalog?bid={{article_info.id}}&sex={{sex}}'>全部目录</navigator>
+
+  <view class='center' style='margin:20rpx 0 70rpx 0'>
+    <view class='sjml dsjl'>
+      <text class='h3'>打赏记录</text>
+      <text class='shub'>(收到打赏{{article_info.tips}}书币)</text>
+      <text class='dsjl right' bindtap='reward'>我要打赏</text>
+    </view>
+    <view class='userbox'>
+
+      <view wx:for="{{tips_list}}" wx:for-index="index" wx:key="item" class='user'>
+        <image src='{{item.avatar}}'></image>
+        <text class='name'>{{item.nickname}}</text>
+        <text class='shubi'>{{item.money}}书币</text>
+      </view>
+
+    </view>
+    <view wx:if="{{tip_more == '0'}}">
+    </view>
+    <view wx:else>
+      <navigator url="/pages/tipslist/tipslist?bid={{article_info.id}}&sex={{sex}}" class='more'>更多打赏</navigator>
+    </view>
+
+  </view>
+  <!-- 打赏弹窗 -->
+  <view class='reward-box' wx:if='{{rewardFlag}}'>
+    <view class='reword'>
+      <view class='giftbox'>
+        <image bindtap='reward' class='modl-close' src='../../imgs/ico/modal-close-x.png'></image>
+        <view class='give'>打赏作品</view>
+        <view bindtap="prizeBtn" data-idx='100' class='gift'>
+          <view class='gift-wrap'>
+            <image style="{{prizeBorderStatus == 100 ? 'border: 1px solid red' : ''}}" src='../../imgs/ico/good.png'></image>
+          </view>
+          <view class='num'>
+            <text>100</text>书币</view>
+        </view>
+        <view bindtap="prizeBtn" data-idx='388' class='gift'>
+          <image style="{{prizeBorderStatus == 388 ? 'border: 1px solid red' : ''}}" src='../../imgs/ico/rose.png'></image>
+          <view class='num'>
+            <text>388</text>书币</view>
+        </view>
+        <view bindtap="prizeBtn" data-idx='588' class='gift'>
+          <image style="{{prizeBorderStatus == 588 ? 'border: 1px solid red' : ''}}" src='../../imgs/ico/bo.png'></image>
+          <view class='num'>
+            <text>588</text>书币</view>
+        </view>
+        <view bindtap="prizeBtn" data-idx='888' class='gift'>
+          <image style="{{prizeBorderStatus == 888 ? 'border: 1px solid red' : ''}}" src='../../imgs/ico/lazhu.png'></image>
+          <view class='num'>
+            <text>888</text>书币</view>
+        </view>
+        <button bindtap="rewardBtn" class='yes'>确定</button>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<!-- 金币不足弹框 -->
+<!-- <view class='reward-box' wx:if='{{noMoneyStatus}}'>
+    <view class='reword'>
+
+      <view class='giftbox' style='height:8.5rem'>
+        <view class='give'>您的余额不足，无法打赏</view>
+        <view class='give-p1'>请您充值后在进行打赏</view>
+        <view class='num'>
+          <view class='line1rpx'></view>
+          <view class='num-no' bindtap="cancelMoneyBtn">取消</view>
+          <view bindtap='goRecharge' class='num-ok'>立即充值</view>
+        </view>
+      </view>
+
+
+    </view>
+  </view> -->
+
+<!-- <view class='foot'>
+  <view class='option'>
+    <navigator url="/pages/index/index">
+      <image src='../../imgs/home.png' class='footimg'></image>
+      <view>首页</view>
+    </navigator>
+  </view>
+  <view class='option'>
+    <navigator url="/pages/ranking/ranking?sex={{sex_type}}">
+      <image src='../../imgs/bottom_nav_trophy.png' class='footimg'></image>
+      <view>排行榜</view>
+    </navigator>
+  </view>
+  <view class='option'>
+    <navigator url="/pages/recharge/recharge">
+      <image src='../../imgs/bottom_nav_money.png' class='footimg'></image>
+      <view>充值</view>
+    </navigator>
+
+  </view>
+  <view class='option'>
+    <navigator url="/pages/personal/personal">
+      <image src='../../imgs/personal.png' class='footimg'></image>
+      <view>个人中心</view>
+    </navigator>
+  </view>
+</view> -->

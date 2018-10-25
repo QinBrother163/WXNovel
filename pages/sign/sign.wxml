@@ -1,0 +1,13 @@
+<!--pages/sign/sign.wxml-->
+<view class='header'>
+  <text>送书币</text>
+</view>
+<view class='center'>
+  <view class='signbox'>
+    <image src='../../imgs/sign2.png'></image>
+  </view>
+  <view class='title'>签到送书币</view>
+  <view class='title2'>每日签到可获得50书币奖励</view>
+  <button bindtap='signBtn' wx:if="{{code == '0'}}">立即签到</button>
+  <button wx:if="{{code == 1}}">您今天已签过，明天再来吧！</button>
+</view>

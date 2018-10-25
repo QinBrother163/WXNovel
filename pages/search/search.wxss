@@ -1,0 +1,146 @@
+/* pages/search/search.wxss */
+
+.center {
+  padding: 0 20rpx;
+}
+
+.header {
+  overflow: hidden;
+  border: 1rpx solid #ccc;
+  border-radius: 50rpx;
+  padding: 0rpx 15rpx;
+width: 73%;
+  height: 60rpx;
+  display: inline-block;
+}
+.searchdiv{
+ margin: 0 auto;
+ margin-top: 15rpx;
+}
+.searchdiv .searchbnt{
+  width: 18%; 
+  display: inline-block;
+  margin-left: 1%;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1rpx solid #e7e7e7;
+  background: #eee;
+  font-size: 28rpx;
+  margin-top: 0rpx;
+  padding: 0rpx;
+  float: right;
+  border-radius: 120rpx;
+  color: #777;
+}
+
+.searchimg {
+ width: 35rpx;
+  height: 35rpx;
+  float: left;
+   margin-top: 12rpx;
+   vertical-align: middle;
+}
+
+.searchtext {
+  float: left;
+  width: 70%;
+  height: 58rpx;
+  margin-left: 10rpx;
+  font-size: 28rpx;
+}
+
+.hot {
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 15rpx;
+}
+
+.bookRecord {
+  margin-bottom: 50rpx;
+margin-right: 15rpx;
+}
+.bookRecord navigator{
+  display: inline-block;
+}
+.bookRecord .list {
+  width: auto;
+  height: auto;
+   font-size: 26rpx; 
+  color: #666;
+  margin: 15rpx 15rpx 0 0;
+  padding: 6rpx 10rpx;
+  border-radius: 120rpx;
+  border: 1rpx solid #eee;
+  }
+
+.jxbooks {
+  width: 100%;
+  margin: 1rem 0;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.7rem;
+}
+
+.jxbooks:last-child {
+  margin-bottom: 3rem;
+  border-bottom: 0;
+}
+
+.jximg {
+  width: 23%;
+  height: 100%;
+  float: left;
+}
+
+.jximg image {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  margin-right: 0.5rem;
+  height: 210rpx;
+  box-shadow: 0 10rpx 10rpx 0 rgba(0, 0, 0, 0.1);
+}
+
+.jxnr {
+  width: 71%;
+  float: left;
+  font-size: 0.6rem;
+  margin-left: 0.8rem;
+}
+
+.jxnr .bt {
+  margin-top: 10rpx;
+}
+
+.jxnr .name {
+  display: block;
+  left: 0.8rem;
+  font-size: 30rpx;
+}
+
+.jxnr .nr {
+  width: 100%;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #a7a7a7;
+}
+
+.zt {
+  font-size: 24rpx;
+  color: #ccc;
+  margin-top: 10rpx;
+}
+
+.zt text {
+  text-align: center;
+  padding: 0 10rpx;
+  border-radius: 110rpx;
+  border: 1rpx solid #e7e7e7;
+}

@@ -1,0 +1,489 @@
+.center {
+  padding: 0 25rpx;
+}
+
+.jximg {
+  width: 27%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.jximg .article_info-img {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  margin-right: 0.5rem;
+  height: 250rpx;
+  box-shadow: 0 10rpx 10rpx 0 rgba(0, 0, 0, 0.1);
+}
+
+.book-free-bg {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.jxnr .bt {
+  font-size: 32rpx;
+margin-bottom: 10rpx;
+}
+
+.jxbooks {
+  overflow: hidden;
+}
+
+.jxnr {
+  float: left;
+  font-size: 0.6rem;
+  margin-left: 0.8rem;
+}
+
+.jxnr .nr {
+  padding-top: 15rpx;
+  font-size: 26rpx;
+}
+
+.zt {
+  font-size: 28rpx;
+  color: #ccc;
+  margin-top: 10rpx;
+}
+
+.zt text{
+  text-align: center;
+  padding: 0 10rpx;
+ border-radius: 120rpx; 
+  font-size: 24rpx;
+  border: 1rpx solid #ccc;
+}
+.bk{
+  text-align: center;
+  color: #ccc;
+  padding: 0 10rpx;
+  border-radius: 110rpx;
+  border: 0.8rpx solid #ccc;
+  font-size: 24rpx;
+}
+.read {
+  overflow: hidden;
+}
+
+.page-style-female .read text {
+  display: inline-box;
+  background-color: #fff;
+   width: 48%;
+  height: 1.2rem;
+  float: right;
+  line-height: 1.2rem;
+  text-align: center;
+  font-size: 28rpx;
+border: 1px solid #ff87ba;
+  margin-top: 30rpx;
+border-radius: 120rpx;
+  color: #ff87ba;
+  padding: 5rpx 0;
+}
+
+.page-style-male .read text {
+border: 0.8px solid #3a5ca2;
+  border-radius: 1.3rem;
+  display: inline-box;
+  width: 48%;
+  height: 1.2rem;
+  float: right;
+  line-height: 1.2rem;
+  text-align: center;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  color: #3a5ca2;
+  padding: 5rpx 0;
+}
+
+.page-style-female .read text.a {
+  color: #fff;
+  background-color: #ff87ba;
+  border-radius: 1.3rem;
+ float: left;
+  font-size: 28rpx;
+  padding: 5rpx 0;
+}
+
+.page-style-male .read text.a {
+  color: #fff;
+  background-color: #3a5ca2;
+  border-radius: 1.3rem;
+float: left;
+  font-size: 28rpx;
+  padding: 5rpx 0;
+}
+
+.nrbox {
+  font-size: 29rpx;
+  color: #7e7e7e;
+  line-height: 50rpx;
+  box-sizing: border-box;
+  border-top: 1px solid #eee;
+  padding-top: 20rpx;
+  margin: 0.8rem 0;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.sjml {
+  margin-top: 20rpx;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.sjml text {
+  font-size: 32rpx;
+}
+#root .h3{
+  position: relative;
+}
+#root .h3::before {
+  content: '';
+  width: 8rpx;
+  height: 44rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  position: absolute;
+  top: 0;
+  left: -15rpx;
+}
+.page-style-male .h3::before {
+  background-color: #3a5ca2;
+}
+
+.page-style-female .h3::before {
+  background-color: #ff87ba;
+}
+
+.sjml navigator {
+    margin-top:  0.3rem;  
+    font-size: 28rpx;
+ border-radius: 0.2rem;
+}
+.sjml .sjml-border{
+  padding: 10rpx 15rpx;
+  border: 1rpx solid #eee;
+}
+.sjml .new {
+  background-color: #f6f6f6;
+  padding: 10rpx 15rpx;
+  border: 1rpx solid #eee;
+ margin-top: 20rpx;
+  position: relative;
+}
+.new-title{
+  display: inline-block;
+  width: 500rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.new-title::before{
+  content: '新';
+  font-size: 0.8rem;
+  width: 0.4rem;
+  text-align: center;
+  background-color: red;
+  color: #fff;
+  padding: 0.08rem;
+  margin-right: 0.3rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.new_info-time {
+  position: absolute;
+  top: 16rpx;
+  right: 20rpx;
+  font-size: 0.7rem;
+  color: #999;
+}
+
+.page-style-female .catalog {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #ff87ba;
+  border-top: 1px solid #eee;
+  font-size: 28rpx;
+  border-bottom: 0.6rem solid #eee;
+}
+
+.page-style-male .catalog {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #3a5ca2;
+  border-top: 1px solid #ccc;
+  font-size: 28rpx;
+  border-bottom: 0.6rem solid #ccc;
+}
+
+.dsjl .shub {
+  font-size: 30rpx;
+  color: #999;
+}
+
+.page-style-male .dsjl.right {
+  content: '我要打赏';
+  font-size: 28rpx;
+  color: #3d5fa4;
+  height: 40rpx;
+  border-radius: 1rem;
+  border: 1px solid #3d5fa4;
+  background-color: #fff;
+  line-height: 40rpx;
+  text-align: center;
+  padding: 2rpx 25rpx;
+  position: absolute;
+  right: 0;
+}
+
+.page-style-female .dsjl.right {
+  content: '我要打赏';
+  font-size: 28rpx;
+  color: #ff87ba;
+  height: 40rpx;
+  border-radius: 1rem;
+  border: 1px solid #ff87ba;
+  background-color: #fff;
+  line-height: 40rpx;
+  text-align: center;
+  padding: 2rpx 25rpx;
+  position: absolute;
+  right: 0;
+}
+
+.userbox {
+  overflow: hidden;
+  display: flex;
+}
+
+.user {
+  width: 30%;
+  height: 6.5rem;
+  text-align: center;
+  flex: 1;
+}
+
+.user image {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.user .name {
+  font-size: 24rpx;
+  color: #999;
+  display: block;
+  margin-top: .3rem;
+}
+
+.user .shubi {
+  font-size: 32rpx;
+  color: #f6b587;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.more {
+  height: 3rem;
+  color: #999;
+  font-size: 0.7rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.loadmore {
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 3rem;
+}
+
+.foot {
+  height: 2.5rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.foot .option {
+  width: 20%;
+  height: 2.5rem;
+  float: left;
+  position: relative;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+.footimg {
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  padding-top: 0.1rem;
+}
+
+.foot navigator {
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: -0.2rem;
+}
+
+/* 打赏弹窗盒子样式 */
+
+.reward-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  z-index: 55;
+}
+
+.reward-box .reward {
+  background-color: #fff;
+  border-radius: 10rpx;
+  width: 700rpx;
+  height: 300rpx; 
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.reward-box .reward view {
+  width: 25%;
+}
+
+.giftbox {
+  width: 18rem;
+  height: 12rem;
+  margin: 10rem auto;
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+  padding-top: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.giftbox .num {
+  width: 100%;
+}
+
+.modl-close {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.give {
+  text-align: center;
+  font-size: 45rpx;
+  color: #000;
+}
+
+.give-p1 {
+  color: #ccc;
+  font-size: 35rpx;
+  margin: 25rpx 0;
+}
+
+.num-no, .num-ok {
+  display: inline-block;
+  font-size: 40rpx;
+  height: 4rem;
+  line-height: 3rem;
+}
+
+.line1rpx {
+  width: 100%;
+  height: 2rpx;
+  margin-top: 20rpx;
+  background-color: #ccc;
+}
+
+.num-no {
+  width: 49%;
+  border-right: 1rpx solid #ccc;
+}
+
+.num-ok {
+  width: 49%;
+  color: red;
+}
+
+
+
+.gift {
+  width: 4rem;
+  /* height: 5rem; */
+  text-align: center;
+  display: inline-block;
+  padding: 1rem 0 0.5rem 0;
+}
+
+.gift image {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+.gift text {
+  line-height: 1.5rem;
+}
+
+.gift .num {
+  color: #999;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.gift .num text {
+  color: #3a7fc1;
+}
+
+.reword .yes {
+  text-align: center;
+  line-height: 2.3rem;
+  margin-top: 0.5rem;
+  width: 15rem;
+  height: 2.3rem;
+  color: #fff;
+}
+.page-style-female .reword .yes{
+  background-color: #ff87ba;
+}
+.page-style-male .reword .yes{
+  background-color: #3a7fc1;
+}

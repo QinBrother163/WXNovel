@@ -1,0 +1,134 @@
+.center {
+  padding: 0 25rpx;
+}
+
+.currency {
+  font-size: 18rpx;
+  padding: 18rpx 0;
+font-size: 30rpx;
+}
+
+.page-style-male .currency text {
+  color: #3a5ca2;
+  font-size: 30rpx;
+}
+
+.page-style-female .currency text {
+  color: #ff87ba;
+  font-size: 30rpx;
+}
+
+.line {
+  width: 100%;
+  height: 10rpx;
+  background-color: #f6f6f6;
+}
+
+.book-charge {
+  font-size: 32rpx;
+  font-weight: 500;
+  padding-top: 18rpx;
+  display: block;
+}
+
+.first {
+  width: 100%;
+  font-size: 22rpx;
+  color: #222;
+  display: inline-block;
+  padding-bottom: 18rpx;
+}
+
+.recharge-item {
+  width: 47%;
+  height:160rpx;
+  text-align: center;
+  float: left;
+  margin-bottom: 25rpx;
+  border-radius: 5rpx;
+  border: 2rpx solid #e4e4e4;
+  padding:6rpx 0;
+  position: relative;
+  box-sizing: inherit;
+  margin-right: 4%;
+}
+
+.recharge-item .title {
+ font-size: 36rpx;
+  margin-top: 6rpx;
+}
+
+.recharge-item .subtitle {
+ font-size: 28rpx;
+  color: #222;
+  margin-top: 6rpx;
+}
+
+.recharge-item text {
+   font-size: 28rpx;
+  color: green;
+  display: block;
+  margin-top: 4rpx;
+}
+
+.recharge-item.r1, .recharge-item.r3 {
+  margin-right: 0;
+}
+
+
+
+.recharge-item.r1 .fire {
+  width: 90rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.recharge-item.r4 {
+  width: 100%;
+  position: relative;
+}
+
+.r365-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
+.recharge-item.r4 .title {
+  color: #cf9253;
+  margin-top: 30rpx;
+}
+
+.page-style-male .sel {
+  border: 2rpx solid #3a5ca2;
+}
+
+.page-style-female .sel {
+  border: 2rpx solid #ff87ba;
+}
+
+.page-style-male .confirm button {
+  background-color: #3a5ca2;
+  font-size: 32rpx;
+  color: #fff;
+  padding: 8rpx;
+}
+
+.page-style-female .confirm button {
+  background-color: #ff87ba;
+  font-size: 32rpx;
+  color: #fff;
+  
+}
+
+.notes text {
+  display: block;
+  font-size: 26rpx;
+  color: #7e7e7e;
+  margin: 19rpx 0;
+}

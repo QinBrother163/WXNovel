@@ -1,0 +1,34 @@
+<!--pages/tipslist/tipslist.wxml-->
+<view id='root'>
+  <view class='dashang-list'>
+    <view class='people-list'>
+      
+      <view wx:if="{{code == 2}}">
+        这么好看的书，快来第一个支持吧！
+      </view>
+
+      <view wx:for="{{tips_list}}" wx:for-index="index" wx:key="item" class='list'>
+        <view class='avatar'>
+          <image src='{{item.avatar}}'></image>
+        </view>
+        <view class='info'>
+          <view class='name'>
+            {{item.nickname}}
+            <text>{{item.addtime}}</text>
+          </view>
+          <view class='value'>
+          赠送 : 
+          <image wx:if="{{item.money == '100'}}" src='../../imgs/ico/good.png'></image> 
+          <image wx:elif="{{item.money == '388'}}" src='../../imgs/ico/rose.png'></image> 
+          <image wx:elif="{{item.money == '588'}}" src='../../imgs/ico/bo.png'></image> 
+          <image wx:else src='../../imgs/ico/lazhu.png'></image> 
+
+          X1 个礼物给作者
+          </view>
+        </view>
+      </view>
+
+
+    </view>
+  </view>
+</view>

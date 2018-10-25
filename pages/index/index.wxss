@@ -1,0 +1,419 @@
+/**index.wxss**/
+.center {
+  padding: 0 25rpx;
+}
+
+.top-search {
+  width: 100%;
+  height: 95rpx;
+}
+
+.sex-tab {
+  height: 2rem;
+  line-height: 1.7rem;
+  position: relative;
+}
+
+.btn-wrap {
+  width: 7rem;
+  height: 1.7rem;
+  font-size: 28rpx;
+  border: 1px solid #eee;
+  border-radius: 1.2rem;
+}
+
+.boy, .girl {
+  display: inline-block;
+  width: 3.5rem;
+  border-radius: 1.2rem;
+  text-align: center;
+}
+
+.male {
+  color: #fff;
+  background-color: #3a5ca2;
+}
+
+.female {
+  color: #fff;
+  background-color: #ff87ba;
+}
+
+.search {
+  width: 50rpx;
+  height: 50rpx;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: 5rpx;
+}
+
+.search image {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper {
+  height: 250rpx;
+  margin-bottom: 15px;
+}
+
+.swiper image {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.zbtj {
+  margin-top: 10px;
+  position: relative;
+}
+
+.zbtj .more {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0.3rem;
+  color: #3a5ca2;
+}
+
+.page-style-male .zbtj .more {
+  color: #3a5ca2;
+}
+
+.page-style-female .zbtj .more {
+  color: #ff87ba;
+}
+
+.zbtj text {
+  font-size: 32rpx;
+}
+
+#root .h3 {
+  position: relative;
+}
+
+#root .h3::before {
+  content: '';
+  width: 8rpx;
+  height: 44rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  position: absolute;
+  top: 0;
+  left: -15rpx;
+}
+
+.page-style-male .h3::before {
+  background-color: #3a5ca2;
+}
+
+.page-style-female .h3::before {
+  background-color: #ff87ba;
+}
+
+.books-list {
+  margin: 0.8rem 0;
+}
+
+.books {
+  width: 154rpx;
+  margin-right: 29.8rpx;
+  display: inline-block;
+  height: 300rpx;
+  position: relative;
+}
+
+.books:nth-child(4) {
+  margin-right: 0;
+}
+
+.books .title {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+}
+
+.bookimg {
+  position: relative;
+}
+
+.book-top-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.1rem;
+  height: 1.9rem;
+}
+
+.book-top-tag-num {
+  position: absolute;
+  top: 0;
+  left: 8rpx;
+  color: #fff;
+  font-size: 40rpx;
+  line-height: 1.6rem;
+}
+
+.bookimg .img {
+  width: 100%;
+  height: 210rpx;
+  box-shadow: 0 10rpx 10rpx 0 rgba(0, 0, 0, 0.1);
+}
+
+.books text, .phbooks text {
+  font-size: 26rpx;
+  display: block;
+  color: #222;
+}
+
+.recommends-text {
+  height: 120rpx;
+  box-sizing: border-box;
+  border-top: 1px solid #eee;
+}
+
+.bt {
+  font-size: 30rpx;
+  color: #222;
+  padding-top: 20rpx;
+}
+
+.nr {
+  font-size: 24rpx;
+  color: #a7a7a7;
+  margin-top: 10rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.navGroups {
+  min-height: 1.8rem;
+  margin: 1rem 0;
+}
+
+.page-style-male .navGroups .cli {
+  color: #fff;
+  background-color: #3a5ca2;
+}
+
+.page-style-female .navGroups .cli {
+  color: #fff;
+  background-color: #ff87ba;
+}
+
+.navGroups view {
+  width: 230rpx;
+  display: inline-block;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.page-style-male .navGroups view {
+  color: #3a5ca2;
+  border: 1px solid #3a5ca2;
+}
+
+.page-style-female .navGroups view {
+  color: #ff87ba;
+  border: 1px solid #ff87ba;
+}
+
+.navGroups view:nth-child(1) {
+  border-radius: 1.2rem 0 0 1.2rem;
+}
+
+.navGroups view:nth-child(2) {
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+.navGroups view:nth-child(3) {
+  border-radius: 0 1.2rem 1.2rem 0;
+}
+
+.phbooks {
+  /* width: 207rpx; */
+  width: 212rpx;
+  height: 360rpx;
+  display: inline-block;
+  margin: 0 30rpx 30rpx 0;
+  text-align: left;
+  position: relative;
+}
+
+.phbooksNav {
+  width: 100%;
+  position: absolute;
+}
+
+.phbooksImg {
+  width: 100%;
+  position: relative;
+}
+
+.phbooksImg .phimg {
+  width: 100%;
+  height: 280rpx;
+  box-shadow: 0 10rpx 10rpx 0 rgba(0, 0, 0, 0.1);
+}
+
+.phbooksTxt {
+  font-size: 30rpx;
+}
+
+.phbooks:nth-child(3), .phbooks:last-child {
+  margin-right: 0;
+}
+
+.jxbooks {
+  width: 100%;
+  margin: 1rem 0;
+  overflow: hidden;
+  border-bottom: 0.8rpx #eee solid;
+  padding-bottom: 30rpx;
+}
+
+.jxbooks:last-child {
+  border: none;
+}
+
+.jximg {
+  width: 23%;
+  height: 100%;
+  float: left;
+}
+
+.jximg image {
+  clear: both;
+  width: 100%;
+  height: 210rpx;
+  text-align: center;
+  margin-right: 0.5rem;
+  box-shadow: 0 10rpx 10rpx 0 rgba(0, 0, 0, 0.1);
+}
+
+.jxnr {
+  width: 71%;
+  float: left;
+  font-size: 0.6rem;
+  margin-left: 0.8rem;
+}
+
+.jxnr .name {
+  display: block;
+  left: 0.8rem;
+  font-size: 30rpx;
+}
+
+.jxnr .nr {
+  width: 100%;
+  margin-top: 15rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.zt {
+  font-size: 28rpx;
+  color: #ccc;
+  margin-top: 15rpx;
+}
+
+.zt text {
+  text-align: center;
+  padding: 0 10rpx;
+  border-radius: 100rpx;
+  border: 1rpx solid #ccc;
+  font-size: 24rpx;
+}
+
+.book-free-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+
+/* 打赏弹窗盒子样式 */
+
+.reward-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  z-index: 9999;
+}
+
+.reward-box .reward {
+  background-color: #fff;
+  border-radius: 10rpx;
+  width: 700rpx;
+  height: 300rpx; 
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.reward-box .reward view {
+  width: 25%;
+}
+
+.giftbox {
+  width: 18rem;
+  height: 12rem;
+  margin: 10rem auto;
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+  padding-top: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.modl-close {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.give {
+  text-align: center;
+  font-size: 40rpx;
+  color: #000;
+  margin-bottom: 45rpx;
+}
+.giftbox-info{
+  margin: 50rpx 0;
+  text-align: center;
+  color: #777;
+  font-size: 35rpx;
+}
+.yes{
+  width: 14rem;
+  height: 2rem;
+  line-height: 2rem;
+  margin-top: 70rpx;
+  color:#00FF99;
+}

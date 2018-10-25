@@ -1,0 +1,65 @@
+/* pages/selected/selected.wxss */
+
+.center {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.jxbooks {
+  width: 100%;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.jxbooks:last-child {
+  margin-bottom: 3rem;
+}
+.jximg {
+  width: 23%;
+  height: 100%;
+  float: left;
+}
+.jximg image {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  height: 210rpx;
+  box-shadow: 0 10rpx 10rpx 0 rgba(0, 0, 0, 0.1);
+}
+
+.jxbooks .bt {
+  font-size: 34rpx;
+  margin-top: 10rpx;
+}
+
+.jxnr {
+  float: left;
+  width: 71%;
+  font-size: 0.7rem;
+  margin-left: 0.8rem;
+}
+
+.jxnr .nr {
+  color: #a7a7a7;
+  width: 100%;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.zt {
+  font-size: 28rpx;
+  color: #ccc;
+   margin-top: 10rpx; 
+}
+.zt text{
+  text-align: center;
+  padding: 0 10rpx;
+  border-radius: 10rpx; 
+  border: 1rpx solid #ccc;
+}

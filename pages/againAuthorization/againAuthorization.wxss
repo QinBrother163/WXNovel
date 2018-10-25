@@ -1,0 +1,43 @@
+/* pages/againAuthorization/againAuthorization.wxss */
+
+.center {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.signbox {
+  width: 6rem;
+  height: 5rem;
+  
+  margin: 3rem auto;
+}
+
+.signbox image {
+  width: 100%;
+  height: 100%;
+}
+
+.title, .title2 {
+  text-align: center;
+}
+
+.title {
+  margin-top: 3rem;
+  font-size: 38rpx;
+}
+
+.title2 {
+  font-size: 34rpx;
+  color: #a7a7a7;
+  margin-top: 0.5rem;
+}
+
+button {
+  margin-top: 2rem;
+  background-color: #3a5ca2;
+  border-radius: 1.3rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 32rpx;
+  color: #fff;
+}

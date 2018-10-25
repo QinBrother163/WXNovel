@@ -1,0 +1,32 @@
+<view wx:if="{{page_show}}" id='root' class="{{sex == 2 ? 'page-style-male' : 'page-style-female'}}">
+  <view class='center'>
+
+    <view class='navGroups'>
+      <view class="btn1 {{oper==1? 'cli': ''}} " bindtap='clikcList' data-oper='1'>点击榜</view>
+      <view class="btn2 {{oper==2? 'cli': ''}} " bindtap='clikcList' data-oper='2'>畅销榜</view>
+      <view class="btn3 {{oper==3? 'cli': ''}} " bindtap='clikcList' data-oper='3'>打赏榜</view>
+    </view>
+
+    <view class='jxbooks' wx:for="{{ranking_list}}" wx:for-index="index" wx:key="item">
+      <navigator url="/pages/novelHome/novelHome?id={{item.bid}}&sex={{sex_type}}">
+        <view class='jximg'>
+          <image class='jximg-img' src='{{urlimgList}}{{item.path}}' ></image>
+          <image class='book-top-tag' src='{{bookRanking_bg[index]}}'></image>
+          <view class='book-top-tag-num'>{{index + 1}}</view>
+        </view>
+        <view class='jxnr'>
+          <view class='bt'>
+            <navigator class='name'>{{item.title}}</navigator>
+          </view>
+          <view class='nr'>{{item.desc}}</view>
+          <view class='zt'>
+            <text>{{item.tstype}}</text>
+            <text class='xscolor' wx:if="{{item.xstype == '0'}}">连载中</text>
+            <text class='xscolor' wx:else>已完结</text>
+          </view>
+        </view>
+      </navigator>
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/personal/personal",
+    "pages/bookcase/bookcase",
+    "pages/ranking/ranking",
+    "pages/novelHome/novelHome",
+    "pages/novelReading/novelReading",
+    "pages/bookshelf/bookshelf",
+    "pages/search/search",
+    "pages/recharge/recharge",
+    "pages/selected/selected",
+    "pages/catalog/catalog",
+    "pages/sign/sign",
+    "pages/tipslist/tipslist",
+    "pages/againAuthorization/againAuthorization"
+  ],
+  "tabBar": {
+    "color": "#666",
+    "borderStyle": "black",
+    "selectedColor": "#333",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imgs/ico/2@2x.png",
+        "selectedIconPath": "imgs/ico/2@2x.png"
+      },
+      {
+        "pagePath": "pages/ranking/ranking",
+        "text": "排行榜",
+        "iconPath": "imgs/ico/trophy@2.png",
+        "selectedIconPath": "imgs/ico/trophy@2.png"
+      },
+      {
+        "pagePath": "pages/bookcase/bookcase",
+        "text": "书库",
+        "iconPath": "imgs/ico/stacks-icon@2x.png",
+        "selectedIconPath": "imgs/ico/stacks-icon@2x.png"
+      },
+      {
+        "pagePath": "pages/recharge/recharge",
+        "text": "充值",
+        "iconPath": "imgs/ico/chong@2x.png",
+        "selectedIconPath": "imgs/ico/chong@2x.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "imgs/ico/1@2x.png",
+        "selectedIconPath": "imgs/ico/1@2x.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "神书阁",
+    "navigationBarTextStyle": "black"
+  }
+}

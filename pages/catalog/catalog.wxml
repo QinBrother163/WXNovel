@@ -1,0 +1,23 @@
+<!--pages/catalog/catalog.wxml-->
+<view wx:if="{{page_show}}" class='catalog'>
+  <text>章节目录</text>
+  <view wx:if="{{sex == 2}}">
+    <image bindtap='sortingBtn' class='sortingImg' src='{{sortingImgStatus == true?"../../imgs/ico/directory-2-1.png":"../../imgs/ico/directory-2-2.png"}}'></image>
+  </view>
+
+  <view wx:else>
+    <image bindtap='sortingBtn' class='sortingImg' src='{{sortingImgStatus == true?"../../imgs/ico/directory-1-1.png":"../../imgs/ico/directory-1-2.png"}}'></image>
+  </view>
+
+
+</view>
+<view class='center'>
+  <view class='catalog-list '>
+
+    <navigator wx:for="{{article_info}}" wx:for-index="index" wx:key="item" url="/pages/novelReading/novelReading?id={{item.id}}" class='first'>{{item.title}}
+      <image wx:if="{{item.isvip == '0'}}" class='right_isvip' src=''></image>
+      <image wx:else class='right_isvip' src='../../imgs/ico/chongzhi.png'></image>
+    </navigator>
+
+  </view>
+</view>

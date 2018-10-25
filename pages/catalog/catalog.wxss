@@ -1,0 +1,43 @@
+/* pages/catalog/catalog.wxss */
+
+.catalog {
+  font-size: 32rpx;
+  text-align: center;
+  padding: 30rpx 0;
+  background-color: #fff;
+  border-bottom: .8rpx solid #eee;
+  position: relative;
+}
+.sortingImg{
+  position: absolute;
+  top: 40rpx;
+  right: 20rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.center {
+  padding: 0 20rpx;
+}
+
+.catalog-list {
+   font-size: 28rpx; 
+  color: #333;
+}
+
+.catalog-list navigator {
+  display: block;
+  padding: .7rem 0;
+}
+
+.first {
+  position: relative;
+  color: #000;
+}
+
+.right_isvip {
+  width: 0.6rem;
+  height: 25rpx;
+  position: absolute;
+  right: .5rem;
+  top: .8rem;
+}

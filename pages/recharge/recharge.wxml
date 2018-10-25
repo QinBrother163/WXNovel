@@ -1,0 +1,41 @@
+<!--pages/recharge/recharge.wxml-->
+<view wx:if="{{page_show}}" id='root' class="{{sex == 2 ? 'page-style-male' : 'page-style-female'}}">
+
+  <view class='center'>
+    <view class='currency'>您的余额
+      <text>{{amount}}</text>书币</view>
+  </view>
+  <view class='line'></view>
+  <view class='center'>
+    <text class='book-charge'>充书币</text>
+    <text class='first'>首次加送1000书币 1元=100书币</text>
+
+    <view wx:for="{{cuxiao}}" wx:for-index="index" wx:key="item" class="recharge-item r{{index}} {{index==flag?'sel':''}}" bindtap='setFlag' data-num='{{index}}' data-id='{{item.id}}'>
+      <image wx:if="{{item.tj == 1}}" class='fire' src='{{fireBg}}'></image>
+      <image wx:if="{{item.id == 1}}" class='r365-bg' src='../../imgs/ico/vip-bg@2x.png'></image>
+      <view wx:if="{{item.id == 1}}">
+        <view class='title'>{{item.titileb}}{{item.titilea}}</view>
+        <text>{{item.titilec}}</text>
+      </view>
+      <view wx:else>
+        <view class='title'>{{item.titilea}}</view>
+        <view class='subtitle'>{{item.titileb}}</view>
+        <text>{{item.titilec}}</text>
+      </view>
+
+    </view>
+
+    <view class='confirm'>
+
+      <form bindsubmit="formSubmit" report-submit='true'>
+        <button formType="submit" type="default">确认充值</button>
+      </form>
+
+    </view>
+
+    <view class='notes'>
+      <text>{{topUpIntroduce}}</text>
+      <text>{{workDate}}</text>
+    </view>
+  </view>
+</view>

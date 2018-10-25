@@ -1,0 +1,84 @@
+<!--pages/bookshelf/bookshelf.wxml-->
+<view wx:if="{{page_show}}" id='root'  class="{{sex == 2 ? 'page-style-male' : 'page-style-female'}}">
+  <view class='header'>
+    <view class="bookshelf' {{clikcList?'active':''}}" bindtap='clikcList'>我的书架</view>
+    <view class="history {{sellingList?'active':''}}" bindtap='sellingList'>阅读历史</view>
+  </view>
+  <view class="center {{clikcList?'showNode':'hideNode'}}">
+    <view class='manage'>
+      <view class='btn-btn' wx:if="{{btnShowStatus == 1}}" bindtap='controlsBookBtn'>管理</view>
+      <view class='btn-btn' wx:elif="{{btnShowStatus == 2}}" bindtap='allBookBtn' data-oper='3'>全选</view>
+      <view class='btn-btn' wx:else bindtap='allBookBtn' data-oper='2'>全不选</view>
+
+
+      <view class='btn-txt' bindtap="cancelControlsBtn">{{book_num}}</view>
+
+    </view>
+
+    <view class='phbooks-list'>
+
+      <view class='phbooks' wx:for="{{bookshelf_list}}" wx:for-index="index" wx:key="item">
+
+        <view bindtap="itemBtn" data-idx='{{index}}' class="phimg-choose-status-wrap {{delBtnShowStatus?'showNode':'hideNode'}}">
+        <view wx:if="{{sex == 2}}">
+<image wx:if="{{item.is_click}}" class='phimg-choose-status' src='../../imgs/ico/novel-h5-checked@2x.png' />
+          <image wx:else class='phimg-choose-status' src='../../imgs/ico/novel-h5-nochecked@2x1.png' />
+        </view>
+        <view wx:else>
+<image wx:if="{{item.is_click}}" class='phimg-choose-status' src='../../imgs/ico/novel-h5-manage-checked@2x.png' />
+          <image wx:else class='phimg-choose-status' src='../../imgs/ico/novel-h5-nochecked@2x.png' />
+        </view>
+          
+        </view>
+
+
+        <navigator url="/pages/novelHome/novelHome?id={{item.bid}}&sex={{sex}}">
+        <view class='phbooksImg'>
+          <image class='phimg' src='{{urlimgList}}{{item.path}}'></image>
+        </view>
+          <view class='name'>{{item.book_title}}</view>
+        </navigator>
+      </view>
+    </view>
+
+
+
+  </view>
+  <view bindtap="delBtn" class="delBtn {{delBtnShowStatus?'showNode':'hideNode'}}">删除({{delCount}})</view>
+
+
+
+  <view class="center {{sellingList?'showNode':'hideNode'}}">
+    <view class='jxbooks' wx:for="{{history_list}}" wx:for-index="index" wx:key="item">
+      <navigator url="/pages/novelReading/novelReading?id={{item.zid}}">
+        <view class='jximg'>
+          <image src='{{urlimgList}}{{item.path}}'></image>
+        </view>
+        <view class='jxnr'>
+          <view class='bt'>
+            <view class='name'>{{item.ctitle}}</view>
+            <view class='name'>{{item.title}}</view>
+          </view>
+          <view class='zt'>
+            <text>{{item.tstype}}</text>
+            <text class='xscolor' wx:if="{{item.xstype == '0'}}">连载中</text>
+            <text class='xscolor' wx:else>已完结</text>
+          </view>
+        </view>
+      </navigator>
+      <view class='jxbooks-del' data-bid='{{item.bid}}' data-index='{{index}}' bindtap='delBoookRecord'>删除</view>
+      <image wx:if="{{!item.bookmark}}" data-index='{{index}}' data-bid='{{item.bid}}' data-mark='{{item.bookmark}}' bindtap='addBookcase' class='jxbooks-addImg' src='../../imgs/ico/bookshelf-icon@2x.png'></image>
+      <view wx:else>
+        <view wx:if="{{sex == 2}}">
+          <image class='jxbooks-addImg' data-index='{{index}}' data-bid='{{item.bid}}' data-mark='{{item.bookmark}}' bindtap='addBookcase' src='../../imgs/ico/bookshelf-icon-male@2x.png'></image>
+        </view>
+        <view wx:else>
+          <image class='jxbooks-addImg' data-index='{{index}}' data-bid='{{item.bid}}' data-mark='{{item.bookmark}}' bindtap='addBookcase' src='../../imgs/ico/bookshelf-icon-female@2x.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+</view>

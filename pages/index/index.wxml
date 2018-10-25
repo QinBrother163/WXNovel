@@ -1,0 +1,179 @@
+<!--index.wxml-->
+<view wx:if="{{page_show}}" id='root' class="{{sex_type == 2 ? 'page-style-male' : 'page-style-female'}}">
+  <view class='center'>
+    <view class="top-search">
+      <view class="sex-tab">
+        <view class='btn-wrap'>
+          <view id='sex_female' class="girl {{sex_type == 3 ? 'female' : ''}}" bindtap='female'>女生</view>
+          <view id='sex_male' class="boy {{sex_type == 2 ? 'male' : ''}}" bindtap="male">男生</view>
+        </view>
+        <view class='search'>
+          <navigator url="/pages/search/search?sex={{sex_type}}" class='search'>
+            <image src='../../imgs/search_search.png'></image>
+          </navigator>
+        </view>
+      </view>
+    </view>
+
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+      <block wx:for="{{imgList}}" wx:for-index="index" wx:key="item">
+        <navigator url="/pages/novelHome/novelHome?id={{item.id}}&sex={{sex_type}}" class='title'>
+          <swiper-item>
+            <image src="{{urlimgList}}{{item.path}}" class="slide-image" />
+          </swiper-item>
+        </navigator>
+      </block>
+    </swiper>
+  </view>
+  <view class='line'></view>
+  <view class='center'>
+    <view class='zbtj'>
+      <text class='h3'>主编推荐</text>
+      <view class='books-list'>
+        <view class='books' wx:for="{{editor_list}}" wx:for-index="index" wx:key="item" wx:if="{{index < 4}}">
+          <navigator url="/pages/novelHome/novelHome?id={{item.id}}&sex={{sex_type}}" class='title'>
+            <view class='bookimg'>
+              <image class='img' src="{{urlimgList}}{{item.path}} " ></image>
+            </view>
+            <text>{{item.title}}</text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+
+    <navigator url="/pages/novelHome/novelHome?id={{item.id}}&sex={{sex_type}}" class='recommends-text' wx:for="{{editor_list}}" wx:for-index="index" wx:key="item" wx:if="{{index >= 4}}">
+      <view class='bt'>
+        <view class='title2'>{{item.title}}</view>
+      </view>
+
+      <view class='nr'>
+        <view class='article'>{{item.desc}}</view>
+      </view>
+    </navigator>
+
+
+  </view>
+
+  <view class='line'></view>
+
+  <view class='center'>
+    <view class='zbtj'>
+      <text class='h3'>新书推荐</text>
+      <view class='books-list'>
+
+        <view class='books' wx:for="{{new_list}}" wx:for-index="index" wx:key="item" wx:if="{{index < 4}}">
+          <navigator url="/pages/novelHome/novelHome?id={{item.id}}&sex={{sex_type}}" class='title'>
+            <view class='bookimg'>
+              <image class='img' src="{{urlimgList}}{{item.path}} " ></image>
+            </view>
+            <text>{{item.title}}</text>
+          </navigator>
+        </view>
+
+      </view>
+    </view>
+
+    <navigator url="/pages/novelHome/novelHome?id={{item.id}}&sex={{sex_type}}" class='recommends-text' wx:for="{{new_list}}" wx:for-index="index" wx:key="item" wx:if="{{index >= 4}}">
+      <view class='bt'>
+        <view class='title2'>{{item.title}}</view>
+      </view>
+
+      <view class='nr'>
+        <view class='article'>{{item.desc}}</view>
+      </view>
+    </navigator>
+
+  </view>
+  <view class='line'></view>
+  <view class='center'>
+    <view class='zbtj'>
+      <text class='h3'>排行榜</text>
+      <view class='more'>
+        <view bindtap='click_ranking' class='right-more'><view>更多</view><image class='right-more-img' src="{{sex_type == 2 ? '  ../../imgs/ico/right_x.png' : '  ../../imgs/ico/right_o.png'}}"></image></view>
+        
+      </view>
+    </view>
+
+    <view class='navGroups'>
+      <view class="btn1 {{rankingShow == 1? 'cli': ''}} " data-index='1' bindtap='clikcList'>点击榜</view>
+      <view class="btn2 {{rankingShow == 2? 'cli': ''}} " data-index='2' bindtap='sellingList'>畅销榜</view>
+      <view class="btn3 {{rankingShow == 3? 'cli': ''}} " data-index='3' bindtap='rewardList'>打赏榜</view>
+    </view>
+
+
+    <view class='phbooks-list'>
+      <view class='phbooks' wx:for="{{ranking_list}}" wx:for-index="index" wx:key="item">
+        <navigator class='phbooksNav' url="/pages/novelHome/novelHome?id={{item.bid}}&sex={{sex_type}}">
+          <view class='phbooksImg'>
+            <image class='phimg' src='{{urlimgList}}{{item.path}}' ></image>
+            <image class='book-top-tag' src='{{bookRanking_bg[index]}}'></image>
+            <view class='book-top-tag-num'>{{index + 1}}</view>
+          </view>
+          <text class='phbooksTxt'>{{item.title}}</text>
+        </navigator>
+      </view>
+    </view>
+
+
+  </view>
+  <view class='line'></view>
+  <view class='center'>
+    <view class='zbtj'>
+      <text class='h3'>小说精选</text>
+      <view class='more'>
+        <navigator class='right-more' url='/pages/selected/selected?sex={{sex_type}}'><view>更多</view><image class='right-more-img' src="{{sex_type == 2 ? '  ../../imgs/ico/right_x.png' : '  ../../imgs/ico/right_o.png'}}"></image></navigator>
+      </view>
+    </view>
+
+    <view class='jxbooks' wx:for="{{choice_list}}" wx:for-index="index" wx:key="item">
+      <navigator url="/pages/novelHome/novelHome?id={{item.id}}&sex={{sex_type}}">
+        <view class='jximg'>
+          <image src='{{urlimgList}}{{item.path}}' ></image>
+        </view>
+        <view class='jxnr'>
+          <view class='bt'>
+            <view class='name' url="/pages/novelHome/novelHome?id={{item.id}}&sex={{sex_type}}">{{item.title}}</view>
+          </view>
+          <view class='nr'>{{item.desc}}</view>
+          <view class='zt'>
+            <text>{{item.tstype}}</text>
+            <text class='xscolor' wx:if="{{item.xstype == '0'}}">连载中</text>
+            <text class='xscolor' wx:else>已完结</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class='line'></view>
+  <view class='center'>
+    <view>
+      <view class='zbtj' style='margin-bottom: 1rem;'>
+        <text class='h3'>限时免费</text>
+      </view>
+
+      <view class='phbooks-list'>
+        <view class='phbooks' wx:for="{{free_list}}" wx:for-index="index" wx:key="item">
+          <navigator class='phbooksNav' url="/pages/novelHome/novelHome?id={{item.id}}&sex={{sex_type}}">
+            <view class='phbooksImg'>
+              <image class='phimg' src='{{urlimgList}}{{item.path}}' ></image>
+              <image class='book-free-bg' src='../../imgs/ico/xianmian.png'></image>
+            </view>
+            <text class='phbooksTxt'>{{item.title}}</text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 打赏弹窗 -->
+   <!-- <view class='reward-box' wx:if='{{authorization_show}}'>
+    <view class='reword'>
+      <view class='giftbox'>
+        <image bindtap="rewardNo" class='modl-close' src='../../imgs/ico/modal-close-x.png'></image>
+        <view class='give'>微信授权</view>
+        <text class='giftbox-info'>小程序需要您的\n微信授权才可以使用哦！</text>
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='yes'>确定</button>
+      </view>
+    </view>
+  </view>  -->

@@ -1,0 +1,51 @@
+/* pages/sign/sign.wxss */
+
+.header {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.center {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.signbox {
+  width: 4rem;
+  height: 4rem;
+  
+  margin: 3rem auto;
+}
+
+.signbox image {
+  width: 4rem;
+  height: 4rem;
+}
+
+.title, .title2 {
+  text-align: center;
+}
+
+.title {
+  margin-top: 3rem;
+  font-size: 38rpx;
+}
+
+.title2 {
+  font-size: 34rpx;
+  color: #a7a7a7;
+  margin-top: 0.5rem;
+}
+
+button {
+  margin-top: 2rem;
+  background-color: #3a5ca2;
+  border-radius: 1.3rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 32rpx;
+  color: #fff;
+}

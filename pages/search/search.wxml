@@ -1,0 +1,41 @@
+<!--pages/search/search.wxml-->
+<view wx:if="{{page_show}}">
+  <view class='center'>
+    <view class='searchdiv'>
+      <view class='header'>
+        <image src='../../imgs/search_search.png' class='searchimg'></image>
+        <input bindinput='searchBox' bindconfirm='searchOk' type='text' name="val" placeholder='输入书名/关键词' class='searchtext'></input>
+      </view>
+      <view bindtap='getSearch' class='searchbnt'>搜索</view>
+    </view>
+    <view wx:if="{{hotShow}}">
+      <view class='hot'>热门搜索</view>
+      <view class='bookRecord'>
+        <navigator wx:for="{{hot_search}}" wx:for-index="index" wx:key="item" url="/pages/novelHome/novelHome?id={{item.id}}">
+          <view class='list'>{{item.title}}</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <view class='center'>
+    <view class='jxbooks' wx:for="{{search_list}}" wx:for-index="index" wx:key="item">
+      <navigator url="/pages/novelHome/novelHome?id={{item.id}}&sex={{sex}}">
+        <view class='jximg'>
+          <image src='{{urlimgList}}{{item.path}}'></image>
+        </view>
+        <view class='jxnr'>
+          <view class='bt'>
+            <view class='name'>{{item.title}}</view>
+          </view>
+          <view class='nr'>{{item.desc}}</view>
+          <view class='zt'>
+            <text>{{item.tstype}}</text>
+            <text class='xscolor' wx:if="{{item.xstype == '0'}}">连载中</text>
+            <text class='xscolor' wx:else>已完结</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

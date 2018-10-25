@@ -1,0 +1,102 @@
+<view wx:if="{{page_show}}" class="center {{pageColor}}">
+  <view class='header'>
+    <view class='subject'>
+      <navigator url='../novelHome/novelHome'>{{chapter_info.title}}</navigator>
+    </view>
+    <view class='menu'>
+      <view bindtap='clicl_bookshelf' class='bookcase'>
+        <image src='../../imgs/ico/4@2x.png' mode="widthFix"></image>
+      </view>
+
+      <view bindtap='click_personal' class='personal'>
+        <image src='../../imgs/ico/1@2x.png' mode="widthFix"></image>
+      </view>
+
+      <view bindtap='click_home' class='home'>
+        <image src='../../imgs/ico/2@2x.png' mode="widthFix"></image>
+      </view>
+
+    </view>
+  </view>
+
+
+  <view class='tool-bar '>
+    <view class='colorbox'>
+      <text class="white {{pageColor == 'white' ? 'pageColor0':''}}" data-bg='white' bindtap='setBg'></text>
+      <text class="green {{pageColor == 'green' ? 'pageColor0':''}}" data-bg='green' bindtap='setBg'></text>
+      <text class="orange {{pageColor == 'orange' ? 'pageColor0':''}}" data-bg='orange' bindtap='setBg'></text>
+      <text class="black {{pageColor == 'black' ? 'pageColorf':''}}" data-bg='black' bindtap='setBg'></text>
+    </view>
+    <view class='font-tool'>
+      <text bindtap="addBookcase" class='add-book'>加入书架</text>
+      <text class='font1' bindtap='reduce'>A-</text>
+      <text class='font2' bindtap='add'>A+</text>
+    </view>
+  </view>
+
+  <view class='text'>
+
+    <import src="../wxParse/wxParse.wxml" />
+
+    <view class="wxParse" style="font-size:{{num + 'rpx'}}">
+      <template is="wxParse" data="{{wxParseData:article_content.nodes}}" />
+    </view>
+  </view>
+
+  <view class='bottom-operation'>
+
+
+    <block wx:if="{{pre_info}}">
+      <view data-id='{{pre_info}}' bindtap='downPage' class='last'>
+        <image wx:if="{{pageColor == 'black'}}" src='../../imgs/ico/1n@2x.png'></image>
+        <image wx:else src='../../imgs/last.png'></image>
+      </view>
+    </block>
+    <block wx:else>
+      <navigator url='/pages/catalog/catalog?bid={{chapter_info.bid}}' class='last'>
+        <image wx:if="{{pageColor == 'black'}}" src='../../imgs/ico/1n@2x.png'></image>
+        <image wx:else src='../../imgs/last.png'></image>
+      </navigator>
+    </block>
+
+
+    <navigator url='/pages/catalog/catalog?bid={{chapter_info.bid}}' class='catalog'>
+      <image wx:if="{{pageColor == 'black'}}" src='../../imgs/ico/2n@2x.png'></image>
+      <image wx:else src='../../imgs/catalog.png'></image>
+    </navigator>
+    <view data-id='{{last_info}}' bindtap='upPage' class='next'>
+      <image wx:if="{{pageColor == 'black'}}" src='../../imgs/ico/3n@2x.png'></image>
+      <image wx:else src='../../imgs/next2.png'></image>
+    </view>
+
+  </view>
+</view>
+
+<!-- 金币不足弹框 -->
+<view class='reward-box' wx:if='{{noMoneyStatus}}'>
+  <view class='reword'>
+    <view class='giftbox' >
+      <view class='give'>您的余额不足，无法购买</view>
+      <view class='give-p1'>请您充值后在进行购买</view>
+      <view class='num'>
+        <view class='line1rpx'></view>
+        <text class='num-no' bindtap="cancelMoneyBtn">取消</text>
+        <text bindtap='goRecharge' class='num-ok'>立即充值</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!--首次登陆签到-->
+
+<view class="change-theme-container dialog-rewards" wx:if="{{showSign}}">
+  <view class="change-theme">
+    <view class="change-theme-title">签到成功</view>
+    <view class="change-theme-main">
+      <view>每日首次阅读，赠送
+        <text class="val">50</text> 书币
+        <text>\n请明日继续签到哦</text>
+      </view>
+    </view>
+    <view bindtap='signOkBtn' class="change-theme-bottom close-btn">确 认</view>
+  </view>
+</view>

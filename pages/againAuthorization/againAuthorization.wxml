@@ -1,0 +1,9 @@
+
+<view class='center'>
+  <view class='signbox'>
+    <image src='../../imgs/WXSQ.jpg'></image>
+  </view>
+  <view class='title'>小程序授权</view>
+  <view class='title2'>小程序需要您的微信授权才可以使用哦！</view>
+  <button class='open-btn' open-type="getUserInfo" bindgetuserinfo="getUserInfo">重新授权</button>
+</view>

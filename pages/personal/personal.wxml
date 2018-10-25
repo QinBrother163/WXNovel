@@ -1,0 +1,81 @@
+<view class='center'>
+  <view class='user'>
+    <image src='{{avatarUrl}}'></image>
+  </view>
+  <view class='name'>{{nickName}}</view>
+  <view class='id'>ID: 88{{user_id}}</view>
+  <view wx:if="{{isvip}}" class='feeDate'>VIP有效期: {{vipstime}} - {{vipetime}}</view>
+</view>
+<view class='line'></view>
+<view class='listbox' style='height:100rpx'>
+  <image src='/imgs/money.png' class='list-img'></image>
+  <view class='list'>
+    <view class='chongz'>
+      <view bindtap='goRecharge'>充值</view>
+    </view>
+    我的账户
+  </view>
+</view>
+
+ <view class='listbox' style='height:100rpx'>
+    <view class='lists history' style='border:none'>
+      <navigator url='/pages/bookshelf/bookshelf'>剩余书币: {{user_money}}</navigator>
+    </view>
+</view> 
+
+<view wx:if="{{app == null}}">
+
+  <view class='vipbox'>
+    <view data-vip='1' bindtap='goRecharge'>
+      <image class='vip' src='../../imgs/vip.png'></image>
+    </view>
+  </view>
+  <view class='listbox'>
+    <image src='/imgs/book.png' class='list-img'></image>
+    <view class='lists history'>
+      <navigator url='/pages/bookshelf/bookshelf'>阅读历史</navigator>
+    </view>
+    <image src='../../imgs/next.png' class='next'></image>
+  </view>
+
+  <view class='listbox'>
+    <image src='/imgs/sign.png' class='list-img'></image>
+    <view class='lists sign'>
+      <navigator url='/pages/sign/sign'>签到有礼</navigator>
+    </view>
+    <image src='../../imgs/next.png' class='next'></image>
+  </view>
+
+  <button bindtap='showAmModalMask' open-type="contact" class='listbox'>
+    <image src='/imgs/I_service.png' class='list-img'></image>
+    <view class='lists last'>
+      <view>联系客服</view>
+    </view>
+    <image src='../../imgs/next.png' class='next'></image>
+  </button>
+</view>
+<!--客服-->
+<!-- <view class="reward_con" wx:if="{{closeBtnStatus}}">
+    <view>
+        <view class="am-modal-mask"></view>
+        <view tabindex="-1" class="am-modal-wrap " role="dialog" aria-labelledby="rcDialogTitle0">
+            <view role="document" class="am-modal am-modal-transparent" style="width: 5.4rem; height: auto;">
+                <view class="am-modal-content">
+                    <image bindtap='closeBtn' class='am-modal-close' src='../../imgs/ico/modal-close-x.png'></image>
+                    <view class="am-modal-header">
+                        <view class="am-modal-title" id="rcDialogTitle0">
+                            <view>联系客服</view>
+                        </view>
+                    </view>
+                    <view class="am-modal-body">
+                        <view class="contact-service-ctn">
+                            <text>长按识别二维码，添加客服微信</text>
+                            <image src="{{imgList}}" bindtap='previewImage'></image>
+                        </view>
+                    </view>
+                </view>
+                <view tabindex="0" style="width: 0px; height: 0px; overflow: hidden;">sentinel</view>
+            </view>
+        </view>
+    </view>
+</view> -->

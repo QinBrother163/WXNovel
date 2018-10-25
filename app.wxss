@@ -1,0 +1,33 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.xscolor {
+  color: #ff836b;
+  margin-left: 20rpx;
+}
+
+.right-more view {
+  font-size: 28rpx;
+  float: left;
+}
+
+.right-more-img {
+  width: 36rpx;
+  height: 36rpx;
+  float: left;
+}
+
+.line {
+  width: 100%;
+  height: 10px;
+  background-color: rgba(204, 204, 204, 0.2);
+}

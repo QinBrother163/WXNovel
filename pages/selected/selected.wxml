@@ -1,0 +1,23 @@
+<!--pages/selected/selected.wxml-->
+<view id='root'>
+  <view class='center'>
+
+    <view class='jxbooks' wx:for="{{choice_list}}" wx:for-index="index" wx:key="item">
+      <navigator url="/pages/novelHome/novelHome?id={{item.id}}&sex={{sex}}">
+        <view class='jximg'>
+          <image src='{{urlimgList}}{{item.path}}'></image>
+        </view>
+        <view class='jxnr'>
+          <view class='bt'>{{item.title}}</view>
+          <view class='nr'>{{item.desc}}</view>
+          <view class='zt::after'>
+            <text>{{item.tstype}}</text>
+            <text class='xscolor' wx:if="{{item.xstype == '0'}}">连载中</text>
+            <text class='xscolor' wx:else>已完结</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+
+  </view>
+</view>

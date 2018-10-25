@@ -1,0 +1,414 @@
+@import "../wxParse/wxParse.wxss";
+
+.center {
+  padding: 0 20rpx;
+}
+
+.center.white {
+  background-color: #fff;
+}
+
+.center.green {
+  background-color: #e3ecd0;
+}
+
+.center.orange {
+  background-color: #eece9c;
+}
+
+.center.black {
+  background-color: black;
+  color: #999 !important;
+}
+
+.header {
+  height: 90rpx;
+  width: 100%;
+  border-bottom: 1px solid f6f6f6;
+  position: relative;
+}
+
+.subject {
+  float: left;
+  line-height: 2rem;
+  width: 55%;
+  height: 2rem;
+  font-size: 34rpx;
+  overflow: hidden;
+}
+.subject navigator {
+  width: 100%;
+  height: 100%;
+}
+.text {
+  min-height: 1500rpx;
+}
+
+.menu {
+  width: 40%;
+  height: 2rem;
+  float: right;
+  text-align: right;
+}
+
+.menu view {
+  display: inline-block;
+  width: 50rpx;
+  height: 1.5rem;
+}
+
+.menu .bookcase, .menu .personal, .menu .home {
+  width: 40rpx;
+  margin-left: 20rpx;
+  margin-top: 8rpx;
+}
+
+.menu .home {
+  margin-right: 0;
+}
+
+.menu image {
+  width: 100%;
+}
+
+.tool-bar {
+  height: 110rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tool-bar .colorbox {
+  float: left;
+  width: 280rpx;
+  height: 60rpx;
+  opacity: 0.7;
+}
+
+.colorbox text {
+  display: inline-block;
+  width: 58rpx;
+  height: 42rpx;
+  border-radius: 100rpx;
+  margin: 10rpx 10rpx 0 0;
+}
+
+.pageColorf {
+  border: 0.8px solid #fff;
+}
+
+.pageColor0 {
+  border: 0.8px solid #999;
+}
+
+.colorbox .white {
+  background-color: #fff;
+}
+
+.colorbox .green {
+  background-color: #e3ecd0;
+}
+
+.colorbox .orange {
+  background-color: #eece9c;
+}
+
+.colorbox .black {
+  background-color: #000;
+}
+
+.font-tool {
+  flex: 1;
+  text-align: right;
+}
+
+.font-tool text {
+  display: inline-block;
+  height: 44rpx;
+  line-height: 44rpx;
+  border-radius: 100rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  background-color: #e4e4e4;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.black .font-tool text {
+  color: #555;
+  background-color: #333;
+}
+
+.green .font-tool text {
+  background-color: #e2eed8;
+}
+
+.orange .font-tool text {
+  background-color: #f9e2d3;
+}
+
+.font-tool .add-book {
+  text-align: center;
+  padding: 0 30rpx;
+}
+
+.font-tool .font1, .font-tool .font2 {
+  text-align: center;
+  padding: 0 10rpx;
+}
+
+.bottom-operation {
+  text-align: center;
+  height: 4rem;
+  margin-top: 1.5rem;
+}
+
+.last, .next {
+  width: 24%;
+  height: 65rpx;
+  display: inline-block;
+}
+
+.bottom-operation image {
+  width: 100%;
+  height: 100%;
+}
+
+.catalog {
+  width: 40%;
+  height: 65rpx;
+  display: inline-block;
+  margin: 0 3%;
+}
+
+.wxParse-p {
+  text-indent: 2em;
+  padding: 0.5rem 0;
+}
+
+/* 打赏弹窗盒子样式 */
+
+.reward-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  z-index: 55;
+}
+
+.reward-box .reward {
+  background-color: #fff;
+  border-radius: 10rpx;
+  width: 700rpx;
+  height: 300rpx;
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.reward-box .reward view {
+  width: 25%;
+}
+
+.giftbox {
+  width: 18rem;
+  /* height: 12rem; */
+  margin: 10rem auto;
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+  padding-top: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.giftbox .num {
+  width: 100%;
+}
+
+.modl-close {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.give {
+  text-align: center;
+  font-size: 45rpx;
+  color: #000;
+}
+
+.give-p1 {
+  color: #ccc;
+  font-size: 35rpx;
+  margin: 25rpx 0;
+}
+
+.num-no, .num-ok {
+  display: inline-block;
+  font-size: 40rpx;
+  padding: 45rpx 0;
+  /* height: 4rem; */
+  /* line-height: 3rem; */
+}
+
+.line1rpx {
+  width: 100%;
+  height: 2rpx;
+  margin-top: 20rpx;
+  background-color: #ccc;
+}
+
+.num-no {
+  width: 49%;
+  border-right: 1rpx solid #ccc;
+}
+
+.num-ok {
+  width: 49%;
+  color: red;
+}
+
+.gift {
+  width: 4rem;
+  text-align: center;
+  display: inline-block;
+  padding: 1rem 0 0.5rem 0;
+}
+
+.gift image {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+.gift text {
+  line-height: 1.5rem;
+}
+
+.gift .num {
+  color: #999;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.gift .num text {
+  color: #3a7fc1;
+}
+
+.reword .yes {
+  text-align: center;
+  line-height: 2.3rem;
+  margin-top: 0.5rem;
+  width: 15rem;
+  height: 2.3rem;
+  background-color: #3a7fc1;
+  color: #fff;
+}
+
+/*<!--中框开始-->*/
+
+.change-theme-container {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.change-theme-container .change-theme {
+  position: absolute;
+  left: 7%;
+  top: 50%;
+  width: 86%;
+  height: 4.53333rem;
+  margin-top: -2.26667rem;
+  background: #fafafc;
+  border-radius: 0.13333rem;
+  text-align: center;
+  z-index: 999;
+}
+
+.change-theme-container .change-theme {
+  background: #fff;
+}
+
+.change-theme-container .change-theme {
+  position: absolute;
+  left: 7%;
+  top: 50%;
+  width: 86%;
+  height: 4.53333rem;
+  margin-top: -2.26667rem;
+  background: #fafafc;
+  border-radius: 0.13333rem;
+  text-align: center;
+  z-index: 999;
+}
+
+.change-theme-container .change-theme {
+  background: #fff;
+}
+
+.dialog-rewards .change-theme {
+  height: auto;
+  margin-top: -2.56rem;
+}
+
+.change-theme-title {
+  font-size: 0.42667rem;
+  margin: 35rpx 0;
+}
+
+.dialog-rewards .change-theme-title {
+  font-size: 38rpx;
+  color: #222;
+}
+
+.change-theme-main {
+  font-size: 0.37333rem;
+  margin-bottom: 0.56rem;
+  border: 1px solid #d5d5d6;
+  width: 86%;
+  margin-left: 7%;
+  height: 1.6rem;
+  overflow: hidden;
+}
+
+.dialog-rewards .change-theme-main {
+  border: 0;
+  color: #a7a7a7;
+  font-size: 30rpx;
+  line-height: 45rpx;
+  margin-bottom: 0.66667rem;
+  height: inherit;
+}
+
+.dialog-rewards .val {
+  color: #ee7f57;
+}
+
+.change-theme-bottom {
+  font-size: 36rpx;
+  padding: 26rpx 0;
+  color: #ee7f57;
+  border-radius: 0 0 0.13333rem 0.13333rem;
+  margin: 0;
+  border-top: 0.01333rem solid #e5e5e5;
+}
+
+/*<!--中框结束-->*/

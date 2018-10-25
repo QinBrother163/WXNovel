@@ -1,0 +1,43 @@
+<view wx:if="{{page_show}}" id='root' class="{{sex == 2 ? 'page-style-male' : 'page-style-female'}}">
+  <view class='titlebox'>
+    <view class='title'>分类 :
+    </view>
+    <view class='option'>
+      <view bindtap="getBookData" data-colorId="31" data-sex="{{sex}}" data-tstype='-1' data-xstype='{{xstype}}' class='nav-url {{changeColor2 == 31? "sel":""}}'>全部</view>
+      <view wx:for="{{leixing_list}}" wx:for-index="index" wx:key="item" data-colorId="{{index}}" bindtap="getBookData" data-sex="{{sex}}" data-tstype='{{index}}' data-xstype='{{xstype}}' class='nav-url {{changeColor2 == index? "sel":""}}'>{{item}}</view>
+
+    </view>
+  </view>
+  <view class='titlebox2'>
+    <view class='title'>状态 :
+    </view>
+    <view class='option'>
+      <view bindtap="getBookData" data-colorId="32" data-sex="{{sex}}" data-tstype='{{tstype}}' data-xstype='2' class='nav-url {{changeColor1 == 32? "sel":""}}'>全部</view>
+      <view bindtap="getBookData" data-colorId="33" data-sex="{{sex}}" data-tstype='{{tstype}}' data-xstype='0' class='nav-url {{changeColor1 == 33? "sel":""}}'>连载中</view>
+      <view bindtap="getBookData" data-colorId="34" data-sex="{{sex}}" data-tstype='{{tstype}}' data-xstype='1' class='nav-url {{changeColor1 == 34? "sel":""}}'>已完结</view>
+
+    </view>
+  </view>
+  <view style='margin-top: 0;' class='line'></view>
+  <view class='center'>
+
+    <view wx:for="{{book_list}}" wx:for-index="index" wx:key="item" class='jxbooks'>
+      <navigator url='/pages/novelHome/novelHome?id={{item.id}}&sex={{sex}}'>
+        <view class='jximg'>
+          <image src='{{urlimgList}}{{item.path}}'></image>
+        </view>
+        <view class='jxnr'>
+          <view class='bt'>
+            <view class='name'>{{item.title}}</view>
+          </view>
+          <view class='nr'>{{item.desc}}</view>
+          <view class='zt'>
+            <text>{{item.tstype}}</text>
+            <text class='xscolor' wx:if="{{item.xstype == '0'}}">连载中</text>
+            <text class='xscolor' wx:else>已完结</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

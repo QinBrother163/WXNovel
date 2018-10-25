@@ -1,0 +1,113 @@
+/* pages/bookcase/bookcase.wxss */
+
+.titlebox, .titlebox2 {
+  display: flex;
+  padding: .6rem 0.4rem;
+  position: relative;
+}
+.titlebox{
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.title {
+  margin: 0.3rem 1rem 0 0;
+  color: #000;
+  font-size: 26rpx;
+}
+
+.option {
+  flex: 1;
+}
+
+.nav-url {
+  display: inline-block;
+  font-size: 26rpx;
+  line-height: 1rem;
+  margin-right: 0.7rem;
+  margin-bottom: 0.5rem;
+  color: #999;
+  padding: 0.15rem 0.4rem;
+}
+
+.page-style-male .sel {
+  padding: 0.15rem 0.4rem;
+  color: #fff;
+  border-radius: 1.2rem;
+font-size: 26rpx;
+  background-color: #3a5ca2;
+}
+.page-style-female .sel {
+  padding: 0.15rem 0.4rem;
+  color: #fff;
+  border-radius: 1.2rem;
+  background-color: #ff87ba;
+}
+
+.center {
+ 
+  margin: 0 25rpx;
+}
+
+.jxbooks {
+  width: 100%;
+  margin: 1rem 0;
+  overflow: hidden;
+ border-bottom: 0.8rpx solid #eee;
+  padding-bottom: 1.2rem;
+}
+
+.jxbooks:last-child {
+  margin-bottom: 3rem;
+}
+.jximg {
+  width: 23%;
+  height: 100%;
+  float: left;
+}
+.jximg image {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  margin-right: 0.5rem;
+  height: 210rpx;
+  box-shadow: 0 10rpx 10rpx 0 rgba(0, 0, 0, 0.1);
+}
+
+.jxnr {
+  width: 71%;
+  float: left;
+  font-size: 0.6rem;
+  margin-left: 0.8rem;
+}
+
+.jxnr .name {
+  display: block;
+  left: 0.8rem;
+  font-size: 30rpx;
+}
+
+.jxnr .nr {
+  width: 100%;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #a7a7a7;
+}
+
+.zt {
+  font-size: 28rpx;
+  color: #ccc;
+  margin-top: 10rpx;
+}
+.zt text{
+  text-align: center;
+  padding: 0 10rpx;
+font-size: 24rpx;
+  border-radius: 120rpx; 
+  border: 1rpx solid #ccc;
+}
